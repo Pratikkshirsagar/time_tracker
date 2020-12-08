@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:time_tracker/common_widgets/custome_raise_button.dart';
+import 'package:time_tracker/app/sign_in/sign_in_button.dart';
 
 class SignInPage extends StatelessWidget {
   @override
@@ -28,18 +28,50 @@ class SignInPage extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               )),
           SizedBox(
+            height: 48.0,
+          ),
+          SignInButton(
+            text: 'Sign In with Google',
+            textColor: Colors.black87,
+            color: Colors.white,
+            onPressed: () {},
+          ),
+          SizedBox(
             height: 8.0,
           ),
-          CustomeRaiseButton(
-            child: Text(
-              'Sign in with google',
-              style: TextStyle(
-                color: Colors.black87,
-                fontSize: 15.0,
-              ),
+          SignInButton(
+            text: 'Sign In with Facebook',
+            textColor: Colors.white,
+            color: Color(0xFF334D92),
+            onPressed: () {},
+          ),
+          SizedBox(
+            height: 8.0,
+          ),
+          SignInButton(
+            text: 'Sign In with email',
+            textColor: Colors.white,
+            color: Colors.teal[700],
+            onPressed: () {},
+          ),
+          SizedBox(
+            height: 8.0,
+          ),
+          Text(
+            'or',
+            style: TextStyle(
+              fontSize: 14.0,
+              color: Colors.black87,
             ),
-            color: Colors.white,
-            borderRadius: 4.0,
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(
+            height: 8.0,
+          ),
+          SignInButton(
+            text: 'Go anonymous',
+            textColor: Colors.black,
+            color: Colors.lime[300],
             onPressed: () {},
           ),
         ],
